@@ -8,5 +8,6 @@ public class test{
         Scanner in = new Scanner(System.in);
         BigInteger a = in.nextBigInteger();
         System.out.println(a.toString(3));
+        in.close();
     }
 }
