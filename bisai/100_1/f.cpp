@@ -29,10 +29,16 @@ int main(){
         scanf("%d %d", &in.x, &in.y);
         unsigned long long int disa = getdis(in, a), disb = getdis(in, b);
         if(disa <= maxa || disb <= maxb) continue;
-        if(disa >= disb){
+        if(disa > disb){
             if(disb > maxb) maxb = disb;
-        }else{
+        }else if (disa < disb){
             if(disa > maxa) maxa = disa;
+        }else{
+            if(maxa >= maxb) {
+                maxa = disa;
+            }else{
+                maxb = disb;
+            }
         }
     }
     cout << maxa + maxb;

@@ -16,14 +16,6 @@ int main(){
     string a, b;
     cin >> a >> b;
     int minn = 0x3f3f3f3f;
-    int n = 1;
-    for(int i = 1; i < b.length(); i++){
-        if(b[i] == b[i - 1]) n++;
-            if(b[i] != b[i - 1]){
-            if(n < minn)  minn = n;
-            n = 1;
-        }
-    }
     int out = 0;
     if(b.length() > a.length()) {
         cout << 0;
