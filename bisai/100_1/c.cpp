@@ -27,17 +27,17 @@ int main(){
             printf("\n");
         }
     }else{
-        */
-        int small = 1;
-        int big = n * (k - 1) + 1;
-        printf("%d\n", n * big + n * (n - 1) / 2 * (n - k + 1));
-        for(int i = 1; i <= n; i++){
-            for(int j = 1; j <= n; j++){
-                if(j != 1) printf(" ");
-                if(j < k) printf("%d", small++);
-                else printf("%d", big++);
-            }
-            printf("\n");
+    */
+    int small = 1;
+    int big = n * (k - 1) + 1;
+    printf("%d\n", n * big + n * (n - 1) / 2 * (n - k + 1));
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= n; j++){
+            if(j != 1) printf(" ");
+            if(j < k) printf("%d", small++);
+            else printf("%d", big++);
         }
+        printf("\n");
+    }
     return 0;
 }
