@@ -33,11 +33,11 @@ bool judge(ll r, ll k){
 }
 int main(){
     while(cin >> n){
-        ll min = 1<<30;
-        ll minr = 1<<30;
-        ll mink = 1<<30;
+        ll min = 0x3f3f3f3f;
+        ll minr = 0x3f3f3f3f;
+        ll mink = 0x3f3f3f3f;
         for(int i = 44; i >= 1; i--){
-            ll lb = 2, ub = 0x3f3f3f3f, mid;
+            ll lb = 2, ub = 10000000, mid;
             while(ub - lb > 1){
                 mid = (lb + ub) >> 1;
                 if(c(i, mid)) ub = mid; 
