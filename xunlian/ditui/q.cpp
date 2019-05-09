@@ -42,7 +42,14 @@ void dfs(int cur){
     }
 }
 int main(){
+    bool flag = 1;
     while(cin >> in[0] >> in[1] >> in[2] >> in[3]){
+        if(!flag){
+            cout << endl;
+        }
+        if(flag){
+            flag = 0;
+        }
         if(!in[0] && !in[1] && !in[2] && !in[3]) break;
         memset(book, 0, sizeof(book));
         memset(mark, 0, sizeof(mark));
