@@ -1,5 +1,5 @@
 /*************************************************************************
-    > File Name: hdu-1754.cpp
+    > File Name: hdu-1166.cpp
     > Author: Wqr_
     > Mail: xueduanwei@126.com 
     > Created Time: 2019年05月27日 星期一 15时17分32秒
@@ -16,57 +16,66 @@
 #include<cmath>
 using namespace std;
 typedef long long ll;
-const int nmax = 200020;
+const int nmax = 50010;
 int sss[nmax << 2];
-int a[nmax], n, m;
+int a[nmax], n;
 void pushup(int rt){
-    sss[rt] = max(sss[rt << 1], sss[rt << 1 | 1]);
+    sss[rt] = sss[rt << 1] + sss[rt << 1 | 1];
 }
 void build(int l, int r, int rt){
     if(l == r){
         scanf("%d", sss + rt);
         return ;
     }
-    int M = (l + r) >> 1;
-    build(l, M, rt << 1);
-    build(M + 1, r, rt << 1 | 1);
+    int m = (l + r) >> 1;
+    build(l, m, rt << 1);
+    build(m + 1, r, rt << 1 | 1);
     pushup(rt);
 }
 void update(int L, int C, int l, int r, int rt){
     if(l == r){
-        sss[rt] = C;
+        sss[rt] += C;
         return ;
     }
-    int M = (l + r) >> 1;
-    if(L <= M) update(L, C, l, M, rt << 1);
-    else update(L, C, M + 1, r, rt << 1 | 1);
+    int m = (l + r) >> 1;
+    if(L <= m) update(L, C, l, m, rt << 1);
+    else update(L, C, m + 1, r, rt << 1 | 1);
     pushup(rt);
 }
 int Query(int L, int R, int l, int r, int rt){
     if(L <= l && r <= R){
         return sss[rt];
     }
-    int M = (l + r) >> 1;
+    int m = (l + r) >> 1;
     int ret = 0;
-    if(L <= M) ret = max(ret, Query(L, R, l, M, rt << 1));
-    if(R > M) ret = max(ret, Query(L, R, M + 1, r, rt << 1 | 1));
+    if(L <= m) ret += Query(L, R, l, m, rt << 1);
+    if(R > m) ret += Query(L, R, m + 1, r, rt << 1 | 1);
     return ret;
 }
 int main(){
-    while(cin >> n >> m){
+    int t;
+    cin >> t;
+    int kase = 0;
+    while(t--){
+        printf("Case %d:\n", ++kase);
+        cin >> n;
         build(1, n, 1);
-        char in;
-        int a, b;
-        for(int i = 0; i < m; i++){
+        string in;
+        while(1){
             cin >> in;
-            cin >> a >> b;
-            if(in == 'Q'){
-                printf("%d\n", Query(a, b, 1, n, 1));
-            }else{
+            int a, b;
+            if(in[0] == 'E') break;
+            if(in[0] == 'A') {
+                scanf("%d %d", &a, &b);
                 update(a, b, 1, n, 1);
+            }else if(in[0] == 'S') {
+                scanf("%d %d", &a, &b);
+                update(a, -b, 1, n, 1);
+            }else if(in[0] == 'Q'){
+                scanf("%d %d", &a, &b);
+                printf("%d\n", Query(a, b, 1, n, 1));
             }
         }
     }
     return 0;
 }
-
