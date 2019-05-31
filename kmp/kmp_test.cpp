@@ -17,23 +17,39 @@
 using namespace std;
 typedef long long ll;
 int nextt[1000];
-void kmp_pre(char in[], int m){
+void kmp_pre(string in){
+    int m = in.length();
     int i, j;
-    nextt[0] = -1;
-    j = nextt[0];
+    j = nextt[0] = -1;
     i = 0;
     while(i < m){
         while(-1 != j && in[i] != in[j]) j = nextt[j];
         nextt[++i] = ++j;
     }
 }
-int main(){
-    char in[500];
-    scanf("%c", in);
-    int m = strlen(in);
-    kmp_pre(in, m);
-    for(int i = 0; i < m; i++){
-        cout << nextt[i] << endl;
+int kmp_count(string zhu, string mo){
+    int i, j;
+    int ans = 0;
+    kmp_pre(mo);
+    for(int k = 0; k <= mo.length(); k++){
+        cout << nextt[k] << " * ";
     }
+    cout << endl;
+    i = j = 0;
+    while(i < zhu.length()){
+        while(-1 != j && zhu[i] != mo[j]) j = nextt[j];
+        i++;
+        j++;
+        if(j >= mo.length()){
+            ans++;
+            j = nextt[j];
+        }
+    }
+    return ans;
+}
+int main(){
+    string zhu, mo;
+    cin >> zhu >> mo;
+    cout << kmp_count(zhu, mo) << endl;
     return 0;
 }
