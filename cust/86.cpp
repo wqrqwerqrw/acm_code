@@ -13,39 +13,31 @@ struct node{
     int now, men, time;
 };
 bool cmp(node &a, node &b){
-    return a.men > b.men;
+    return a.men < b.men;
 }
 vector<node> ans;
 int n, m, k;
 void bfs(){
     queue<node> q;
-    node start;
     q.push(node{0, 0, 0});
     book[0] = 1;
     while(!q.empty()){
         node tmp = q.front();
         q.pop();
-        if(tmp.time > k) continue;
+        //cout << tmp.now << endl;
+        if(tmp.time > k + 1) continue;
         if(tmp.now > 2 * n) continue;
         if(tmp.now == n) ans.push_back(tmp);
-        if(ifmen[tmp.now]){
-            if(!book[men[tmp.now]]){
-
-            }
+        if(ifmen[tmp.now] && !book[men[tmp.now]]){
+            q.push(node{men[tmp.now], tmp.men + 1, tmp.time});
+            //book[men[tmp.now]] = 1;
         }
-        for(int i = -1; i <= 1; i++){
-            if(i == 0) continue;
-            int nx = tmp.now + i;
+        for(int tx = -1; tx <= 1; tx++){
+            if(tx == 0) continue;
+            int nx = tmp.now + tx;
             if(nx < 0) continue;
-            if(ifmen[nx]){
-                if(!book[men[nx]]){
-                    cout << men[nx] << endl;
-                    q.push(node{men[nx], tmp.men + 1, tmp.time + 1});
-                    book[men[nx]] = 1;
-                }
-            }
             if(!book[nx]){
-                q.push(node{tmp.now + nx, tmp.men, tmp.time + 1});
+                q.push(node{nx, tmp.men, tmp.time + 1});
                 book[nx] = 1;
             }
         }
@@ -53,9 +45,9 @@ void bfs(){
     if(ans.size()){
         sort(ans.begin(), ans.end(), cmp);
         for(auto tmp : ans){
-            cout << tmp.men << " " << tmp.time << " " << tmp.now << endl;
+            cout << tmp.men << " " << tmp.time << endl;
         }
-        cout << ans[0].men << " " << ans[0].time << endl;
+        cout << ans[0].men  << " " << ans[0].time << endl;
     }else{
         cout << "summon TanYz" << endl;
     }

@@ -7,9 +7,14 @@
 
 #include<iostream>
 using namespace std;
+const nmax = 100 + 5;
+int n, a, b, x, y, z;
+int dp[nmax][nmax];
 int main(){
-	int n;
-	while(cin >> n){
-		:
-	}
+    while(cin >> n >> a >> b >> x >> y >> z){
+        memset(dp, 0, sizeof(dp));
+        dp[0][0] = 0;
+        dp[1][0] = 
+    }
+    return 0;
 }
