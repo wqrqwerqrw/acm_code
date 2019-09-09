@@ -6,7 +6,7 @@
 using namespace std;
 typedef long long ll;
 int n;
-const nmax = 100 + 5;
+const int nmax = 100 + 5;
 vector<int> zi(nmax);
 int dp[nmax][nmax];
 int main(){
