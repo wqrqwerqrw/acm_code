@@ -58,8 +58,10 @@ int main() {
             for (int j = 0; j <= lens; j++) {
                 if (!i && !j) continue;
                 dp[i][j] = INF;
-                if (i) dp[i][j] = min(dp[i][j], dp[i - 1][j] + cnt[i - 1][j]);
-                if (j) dp[i][j] = min(dp[i][j], dp[i][j - 1] + cnt[i][j - 1]);
+                if (i)
+                    dp[i][j] = min(dp[i][j], dp[i - 1][j] + cnt[i - 1][j]);
+                if (j) 
+                    dp[i][j] = min(dp[i][j], dp[i][j - 1] + cnt[i][j - 1]);
             }
         printf("%d\n", dp[lenf][lens]);
     }
