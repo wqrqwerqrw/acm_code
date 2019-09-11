@@ -22,6 +22,7 @@ bool isp(int l, int r){
     return p[l][r];
 }
 
+
 int main()
 {
     iofuck;

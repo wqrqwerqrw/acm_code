@@ -12,9 +12,6 @@ int n, m;
 int dp[nmax][nmax];
 int c[nmax][nmax];
 int main() {
-#ifndef ONLINE_JUDGE
-    freopen("in.txt", "r", stdin);
-#endif
     int t;
     scanf("%d", &t);
     while (t--) {
@@ -28,9 +25,9 @@ int main() {
         memset(c, 0, sizeof(c));
         scanf("%s", p + 1);
         scanf("%s", q + 1);
-        cout << p << endl;
         n = strlen(p + 1);
         m = strlen(q + 1);
+        //cout << p + 1 << q + 1 << endl;
         for (int i = 1; i <= n; i++) {
             p[i] -= 'A';
         }
@@ -53,14 +50,11 @@ int main() {
                     c[i][j] = c[i - 1][j];
                     if (i == sp[p[i]] && sq[p[i]] > j) c[i][j]++;
                     if (i == eq[p[i]] && eq[p[i]] <= j) c[i][j]--;
-                } else if (j) {
+                }
+                if (j) {
                     c[i][j] = c[i][j - 1];
-                    if (j == sq[q[j]] && sp[q[j]] > i) {
-                        c[i][j]++;
-                    }
-                    if (j == eq[q[j]] && ep[q[j]] <= i) {
-                        c[i][j]--;
-                    }
+                    if (j == sq[q[j]] && sp[q[j]] > i) c[i][j]++;
+                    if (j == eq[q[j]] && ep[q[j]] <= i) c[i][j]--;
                 }
             }
         }

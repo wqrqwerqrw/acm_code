@@ -5,6 +5,10 @@
 using namespace std;
 typedef long long ll;
 int main(){
+    int t[100];
+    for(int i = 0; i < 100; i++){
+        t[i] = 200;
+    }
     cout << 1 << endl;
     return 0;
 }

@@ -1,6 +1,5 @@
 // UVa1625 Color Length
 // Rujia Liu
-
 #include <iostream>
 #include <algorithm>
 #include <cstdio>
@@ -13,8 +12,9 @@ const int INF = 1000000000;
 char p[maxn], q[maxn];  // starts from position 1
 int sp[26], sq[26], ep[26],
     eq[26];  // sp[i] start positions of character i in p
-int d[2][maxn],
-    c[2][maxn];  // c[i][j]: how many "incomplete" colors in the mixed sequence
+int d[maxn][maxn],
+    c[maxn]
+     [maxn];  // c[i][j]: how many "incomplete" colors in the mixed sequence
 
 int main() {
 #ifndef ONLINE_JUDGE
@@ -45,33 +45,32 @@ int main() {
         }
 
         // dp
-        int t = 0;
+        int i = 0;
         memset(c, 0, sizeof(c));
         memset(d, 0, sizeof(d));
         for (int i = 0; i <= n; i++) {
             for (int j = 0; j <= m; j++) {
                 if (!i && !j) continue;
-
                 // calculate d
                 int v1 = INF, v2 = INF;
-                if (i) v1 = d[t ^ 1][j] + c[t ^ 1][j];  // remove from p
-                if (j) v2 = d[t][j - 1] + c[t][j - 1];  // remove from q
-                d[t][j] = min(v1, v2);
+                if (i) v1 = d[i - 1][j] + c[i - 1][j];  // remove from p
+                if (j) v2 = d[i][j - 1] + c[i][j - 1];  // remove from q
+                d[i][j] = min(v1, v2);
 
                 // calculate c
                 if (i) {
-                    c[t][j] = c[t ^ 1][j];
-                    if (sp[p[i]] == i && sq[p[i]] > j) c[t][j]++;
-                    if (ep[p[i]] == i && eq[p[i]] <= j) c[t][j]--;
-                } else if (j) {
-                    c[t][j] = c[t][j - 1];
-                    if (sq[q[j]] == j && sp[q[j]] > i) c[t][j]++;
-                    if (eq[q[j]] == j && ep[q[j]] <= i) c[t][j]--;
+                    c[i][j] = c[i - 1][j];
+                    if (sp[p[i]] == i && sq[p[i]] > j) c[i][j]++;
+                    if (ep[p[i]] == i && eq[p[i]] <= j) c[i][j]--;
+                }
+                if (j) {
+                    c[i][j] = c[i][j - 1];
+                    if (sq[q[j]] == j && sp[q[j]] > i) c[i][j]++;
+                    if (eq[q[j]] == j && ep[q[j]] <= i) c[i][j]--;
                 }
             }
-            t ^= 1;
         }
-        printf("%d\n", d[t ^ 1][m]);
+        printf("%d\n", d[i ^ 1][m]);
     }
     return 0;
 }
