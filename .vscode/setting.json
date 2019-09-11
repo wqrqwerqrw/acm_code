@@ -1,0 +1,10 @@
+{
+    "code-runner.runInTerminal": true,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.executorMap": {
+        "c": "gcc $fileName -o build/$fileNameWithoutExt.exe && .\\build\\$fileNameWithoutExt.exe",
+        "cpp": "g++ $fileName -o build/$fileNameWithoutExt.exe -Wall -O2 -static-libgcc -std=c++14 && .\\build\\$fileNameWithoutExt.exe"
+    },
+    "code-runner.preserveFocus": false,
+    "code-runner.saveFileBeforeRun": true
+}
