@@ -5,7 +5,7 @@
         
         {
             "name": "C++ Launch (GDB)",                 // 配置名称，将会在启动配置的下拉菜单中显示
-            "type": "cppdbg",                           // 配置类型，这里只能为cppdbg
+            "type": "cppdbg", // 配置类型，这里只能为cppdbg
             "request": "launch",                        // 请求配置类型，可以为launch（启动）或attach（附加）
             "targetArchitecture": "x64",                // 生成目标架构，一般为x86或x64
             "program": "${fileDirname}/${fileBasenameNoExtension}.exe", // 将要进行调试的程序的路径
