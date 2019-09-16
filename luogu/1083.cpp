@@ -7,7 +7,7 @@ using namespace std;
 typedef long long ll;
 const int nmax = 1e6 + 10;
 int n, m;
-int jiao[namx], d[nmax], s[nmax], t[nmax];
+int jiao[nmax], d[nmax], s[nmax], t[nmax];
 int ss[nmax << 2];
 
 void pushup(int rt){
