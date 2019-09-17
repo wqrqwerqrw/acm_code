@@ -10,7 +10,7 @@ using namespace std;
 typedef long long ll;
 const ll nmax = 1e5 + 10;
 const ll nmax2 = 2e5 + 10;
-ll n, m, r, mod;
+ll n, q;
 ll w[nmax], wt[nmax];
 /*******************向前星***************/
 ll head[nmax], e = 0;
@@ -162,12 +162,6 @@ struct qtree {
         ans %= mod;
         return ans;
     }
-    void add_by_tree(ll x, ll C) {
-        tr.update(1, ns[x].id, ns[x].id + ns[x].siz - 1, C);
-    }
-    ll que_by_tree(ll x) {
-        return tr.query(1, ns[x].id, ns[x].id + ns[x].siz - 1) % mod;
-    }
 }qt;
 int main() {
     iofuck;
@@ -175,34 +169,24 @@ int main() {
     freopen("in.txt", "r", stdin);
 #endif
     memset(head, -1, sizeof(head));
-    cin >> n >> m >> r >> mod;
-    for (ll i = 1; i <= n; i++) {
-        cin >> w[i];
-    }
-    ll u, v;
+    cin >> n;
     for (ll i = 0; i < n - 1; i++) {
         cin >> u >> v;
         add(u, v);
         add(v, u);
     }
+    for(int i = 0; i < n; i++){
+        cin >> w[i];
+    }
     qt.init(r);
-    ll x, y, z;
-    ll com;
-    for(int i = 0; i < m; i++){
-        cin >> com;
-        if (com == 1) {
-            cin >> x >> y >> z;
-            qt.add_by_way(x, y, z);
-        } else if (com == 2) {
-            cin >> x >> y;
-            cout << qt.que_by_way(x, y) << endl;
-        } else if (com == 3) {
-            cin >> x >> y;
-            qt.add_by_tree(x, y);
-        } else if (com == 4) {
-            cin >> x;
-            cout << qt.que_by_tree(x) << endl;
-        }
+    cin >> q;
+    string ope;
+    int x, y;
+    while(q--){
+        cin >> ope >> x >> y;
+        if(ope[1] == 'C') qt.add_by_way(x, x, y);
+        if(ope[1] == 'M') qt.que_by_way(x, y);
+        if(ope[1] == 'S') qt.que_by_way(x, y);
     }
     return 0;
 }
