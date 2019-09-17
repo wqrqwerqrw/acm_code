@@ -17,11 +17,6 @@ struct edge {
     ll next, to;
 } eg[nmax2];
 void add(ll u, ll v) {
-    /*
-    eg[e++].to = v;
-    eg[e].next = head[u];
-    head[u] = e;
-    */
     eg[e].to = v;
     eg[e].next = head[u];
     head[u] = e++;
@@ -30,7 +25,7 @@ void add(ll u, ll v) {
 struct sgt {
     struct node {
         ll val, l, r, lz;
-        node() { lz = val = 0;}
+        node() { lz = val = 0; }
         ll len() { return r - l + 1; }
         ll mid() { return (l + r) / 2; }
     } ns[nmax * 4];
@@ -43,19 +38,19 @@ struct sgt {
         node &cur = ns[nc];
         lson.lz += cur.lz;
         rson.lz += cur.lz;
-        lson.val += lson.lz * lson.len();
-        rson.val += rson.lz * rson.len();
+        lson.val += cur.lz * lson.len();
+        rson.val += cur.lz * rson.len();
         lson.val %= mod;
         rson.val %= mod;
         cur.lz = 0;
     }
-    void pr(ll nc){
+    void pr(ll nc) {
         node &cur = ns[nc];
-        if(cur.l == cur.r){
+        if (cur.l == cur.r) {
             cout << cur.val << " ";
-            return ;
+            return;
         }
-        if(cur.lz) pushdown(nc);
+        if (cur.lz) pushdown(nc);
         pr(nl);
         pr(nr);
     }
@@ -102,7 +97,7 @@ struct sgt {
 struct qtree {
     sgt tr;
     ll idcnt;
-    qtree(){ idcnt = 0; }
+    qtree() { idcnt = 0; }
     struct node {
         ll deep, fa, id, top, son, siz;
     } ns[nmax];
@@ -149,7 +144,7 @@ struct qtree {
             tr.update(1, ns[ns[x].top].id, ns[x].id, C);
             x = ns[ns[x].top].fa;
         }
-        if(ns[x].deep > ns[y].deep) swap(x, y);
+        if (ns[x].deep > ns[y].deep) swap(x, y);
         tr.update(1, ns[x].id, ns[y].id, C);
     }
     ll que_by_way(ll x, ll y) {
@@ -161,7 +156,7 @@ struct qtree {
             ans %= mod;
             x = ns[ns[x].top].fa;
         }
-        if(ns[x].deep > ns[y].deep) swap(x, y);
+        if (ns[x].deep > ns[y].deep) swap(x, y);
         ans += tr.query(1, ns[x].id, ns[y].id);
         ans %= mod;
         return ans;
@@ -172,7 +167,7 @@ struct qtree {
     ll que_by_tree(ll x) {
         return tr.query(1, ns[x].id, ns[x].id + ns[x].siz - 1) % mod;
     }
-}qt;
+} qt;
 int main() {
     iofuck;
 #ifndef ONLINE_JUDGE
@@ -190,33 +185,22 @@ int main() {
         add(v, u);
     }
     qt.init(r);
-    qt.tr.pr(1);
-    cout << endl;
     ll x, y, z;
     ll com;
-    for (ll i = 0; i < m; i++) {
-        cin >> com;
-        if (com == 1) {
-            // wrong
-            cin >> x >> y >> z;
-            qt.add_by_way(x, y, z);
-            qt.tr.pr(1);
-            cout << endl;
-        } else if (com == 2) {
-            // currect
-            cin >> x >> y;
-            cout << qt.que_by_way(x, y) << endl;
-        } else if (com == 3) {
-            // wrong
-            cin >> x >> y;
-            qt.add_by_tree(x, y);
-            qt.tr.pr(1);
-            cout << endl;
-        } else if (com == 4) {
-            // currect
-            cin >> x;
-            cout << qt.que_by_tree(x) << endl;
-        }
+    cin >> com;
+    if (com == 1) {
+        cin >> x >> y >> z;
+        qt.add_by_way(x, y, z);
+    } else if (com == 2) {
+        cin >> x >> y;
+        cout << qt.que_by_way(x, y) << endl;
+    } else if (com == 3) {
+        cin >> x >> y;
+        qt.add_by_tree(x, y);
+    } else if (com == 4) {
+        cin >> x;
+        cout << qt.que_by_tree(x) << endl;
     }
-    return 0;
+}
+return 0;
 }

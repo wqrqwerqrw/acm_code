@@ -130,6 +130,7 @@ inline int qSon(int x) {
 }
 
 inline void updSon(int x, int k) {  //同上
+cout << id[x] << " " << id[x] + siz[x] - 1 << "--" << endl;
     update(1, 1, n, id[x], id[x] + siz[x] - 1, k);
 }
 
@@ -179,8 +180,6 @@ int main() {
     dfs1(r, 0, 1);
     dfs2(r, r);
     build(1, 1, n);
-    pr(1, 1, n);
-    cout << endl;
     while (m--) {
         int k, x, y, z;
         read(k);
