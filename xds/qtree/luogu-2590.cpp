@@ -10,25 +10,25 @@ typedef long long ll;
 const int nmax = 3e5 + 50;
 int n, q, head[nmax], e = 0, w[nmax], wt[nmax];
 struct edge {
-    ll next, to;
+    int next, to;
 }eg[nmax * 2];
-void add(ll u, ll v){
+void add(int u, int v){
     eg[e].to = v;
     eg[e].next = head[u];
     head[u] = e++;
 }
 struct sgt{
     struct node{
-        ll vmax, vsum, l, r;
+        int vmax, vsum, l, r;
         node(){vmax = vsum = 0;}
-        ll len() {return l - r + 1;}
-        ll mid() {return (l + r) / 2;}
+        int len() {return l - r + 1;}
+        int mid() {return (l + r) / 2;}
     }ns[nmax * 4];
-    void pushup(ll nc){
+    void pushup(int nc){
         ns[nc].vmax = max(ns[nl].vmax, ns[nr].vmax);
         ns[nc].vsum = ns[nl].vsum + ns[nr].vsum;
     }
-    void pr(ll nc){
+    void pr(int nc){
         node &cur = ns[nc];
         if(cur.l == cur.r){
             cout << cur.vmax << " ";
@@ -37,7 +37,7 @@ struct sgt{
         pr(nl);
         pr(nr);
     }
-    void build(ll nc, ll l, ll r){
+    void build(int nc, int l, int r){
         node &cur = ns[nc];
         cur.l = l;
         cur.r = r;
@@ -49,7 +49,7 @@ struct sgt{
         build(nr, cur.mid() + 1, r);
         pushup(nc);
     }
-    void update(ll nc, ll L, ll C){
+    void update(int nc, int L, int C){
         node &cur = ns[nc];
         if(cur.l == cur.r){
             cur.vsum = cur.vmax = C;
@@ -59,9 +59,9 @@ struct sgt{
         if(L > cur.mid()) update(nr, L, C);
         pushup(nc);
     }
-    ll query_max(ll nc, ll L, ll R){
+    int query_max(int nc, int L, int R){
         node &cur = ns[nc];
-        ll ret = 0;
+        int ret = -INF;
         if(L <= cur.l && cur.r <= R){
             ret = max(ret, cur.vmax);
             return ret;
@@ -70,11 +70,11 @@ struct sgt{
         if(R > cur.mid()) ret = max(ret, query_max(nr, L, R));
         return ret;
     }
-    ll query_sum(ll nc, ll L, ll R){
+    int query_sum(int nc, int L, int R){
         node &cur = ns[nc];
-        ll ret = 0;
+        int ret = 0;
         if(L <= cur.l && cur.r <= R){
-            ret = cur.vsum;
+            ret += cur.vsum;
             return ret;
         }
         if(L <= cur.mid()) ret += query_sum(nl, L, R);
@@ -84,10 +84,10 @@ struct sgt{
 };
 struct qtree{
     struct node{
-        ll deep, fa, id, top, son, siz;
+        int deep, fa, id, top, son, siz;
     } ns[nmax];
     sgt sss;
-    ll idcnt;
+    int idcnt;
     qtree() {
         idcnt = 0;
     }
@@ -96,14 +96,14 @@ struct qtree{
         dfs2(1, 1);
         sss.build(1, 1, n);
     }
-    void dfs1(ll x, ll f, ll deep) {
+    void dfs1(int x, int f, int deep) {
         node &cur = ns[x];
         cur.deep = deep;
         cur.fa = f;
         cur.siz = 1;
-        ll maxson = -1;
-        for (ll i = head[x]; i != -1; i = eg[i].next) {
-            ll y = eg[i].to;
+        int maxson = -1;
+        for (int i = head[x]; i != -1; i = eg[i].next) {
+            int y = eg[i].to;
             if (y == f) continue;
             dfs1(y, x, deep + 1);
             cur.siz += ns[y].siz;
@@ -113,24 +113,24 @@ struct qtree{
             }
         }
     }
-    void dfs2(ll x, ll topf) {
+    void dfs2(int x, int topf) {
         node &cur = ns[x];
         cur.id = ++idcnt;
         wt[cur.id] = w[x];
         cur.top = topf;
         if (!cur.son) return;
         dfs2(cur.son, topf);
-        for (ll i = head[x]; i != -1; i = eg[i].next) {
-            ll y = eg[i].to;
+        for (int i = head[x]; i != -1; i = eg[i].next) {
+            int y = eg[i].to;
             if (y == cur.fa || y == cur.son) continue;
             dfs2(y, y);
         }
     }
-    void change(ll nc, ll C){
+    void change(int nc, int C){
         sss.update(1, ns[nc].id, C);
     }
-    ll quemax(ll x, ll y){
-        ll ans = 0;
+    int quemax(int x, int y){
+        int ans = -INF;
         while (ns[x].top != ns[y].top) {
             if (ns[ns[x].top].deep < ns[ns[y].top].deep)
                 swap(x, y);
@@ -141,8 +141,8 @@ struct qtree{
         ans = max(ans, sss.query_max(1, ns[x].id, ns[y].id));
         return ans;
     }
-    ll quesum(ll x, ll y){
-        ll ans = 0;
+    int quesum(int x, int y){
+        int ans = 0;
         while (ns[x].top != ns[y].top) {
             if (ns[ns[x].top].deep < ns[ns[y].top].deep)
                 swap(x, y);
@@ -178,7 +178,7 @@ int main(){
     //qt.test();
     cin >> q;
     string ope;
-    ll x, y;
+    int x, y;
     while(q--){
         cin >> ope >> x >> y;
         if(ope[1] == 'H') qt.change(x, y);
