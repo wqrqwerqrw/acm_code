@@ -24,7 +24,7 @@ void add(int x, int y) {
     eg[e].next = head[x];
     head[x] = e++;
 }
-void pushdown(int rt, int l){
+void pushdown(int rt, int l) {
     laz[rt << 1] += laz[rt];
     laz[rt << 1 | 1] += laz[rt];
     a[rt << 1] += laz[rt] * (l - l / 2);
@@ -33,6 +33,7 @@ void pushdown(int rt, int l){
     a[rt << 1 | 1] %= mod;
     laz[rt] = 0;
 }
+
 void dfs1(int x, int f, int deep) {
     dep[x] = deep;
     fa[x] = f;

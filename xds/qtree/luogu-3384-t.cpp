@@ -128,7 +128,6 @@ inline int qSon(int x) {
     query(1, 1, n, id[x], id[x] + siz[x] - 1);  //子树区间右端点为id[x]+siz[x]-1
     return res;
 }
-
 inline void updSon(int x, int k) {  //同上
 cout << id[x] << " " << id[x] + siz[x] - 1 << "--" << endl;
     update(1, 1, n, id[x], id[x] + siz[x] - 1, k);
