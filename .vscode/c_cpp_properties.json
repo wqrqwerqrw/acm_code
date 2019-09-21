@@ -5,7 +5,7 @@
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "C:/MinGw/bin/g++.exe",
             "includePath": [
-                "${workspaceFolder}"
+                "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++"
             ],
             "cppStandard": "c++14"
         }

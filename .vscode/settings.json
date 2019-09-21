@@ -80,6 +80,8 @@
         "thread": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "rope": "cpp",
+        "slist": "cpp"
     },
 }

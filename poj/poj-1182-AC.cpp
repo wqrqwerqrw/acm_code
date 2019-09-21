@@ -10,6 +10,12 @@
 #include <queue>
 #include <cstring>
 #include <string>
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
+using namespace std;
+using namespace __gnu_pbds;
+typedef long long ll;
+tree<ll,null_type,less<ll>,rb_tree_tag,tree_order_statistics_node_update> bbt;
 using namespace std;
 int par[150010];
 int high[150010];

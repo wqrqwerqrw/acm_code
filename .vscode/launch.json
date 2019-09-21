@@ -38,12 +38,17 @@
             "miDebuggerPath": "C:/MinGw/bin/gdb.exe",
             "setupCommands": [
                 {
-                    "description": "Enable pretty-printing for GDB",
+                    "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Compile"
+            "preLaunchTask": "Compile",
+            "logging": {
+                "trace": false,
+                "traceResponse": false,
+                "engineLogging": false
+            }
         }
     ]
 }
