@@ -2,7 +2,21 @@
 {
     "version": "0.2.0",
     "configurations": [
-                {
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - f",
+            "request": "launch",
+            "mainClass": "f",
+            "projectName": "acm_code_4d9ec75a"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - a",
+            "request": "launch",
+            "mainClass": "a",
+            "projectName": "acm_code_4d9ec75a"
+        },
+        {
             "name": "C++ Launch (GDB)",
             "type": "cppdbg",
             "request": "launch",

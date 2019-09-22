@@ -19,5 +19,6 @@ class i {
             out = out.add(d);
             System.out.println(out.toString());
         }
+        sc.close();
     }
 }
