@@ -2,28 +2,7 @@
 {
     "version": "0.2.0",
     "configurations": [
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - testjava",
-            "request": "launch",
-            "mainClass": "testjava",
-            "projectName": "acm_code_4d9ec75a"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - test",
-            "request": "launch",
-            "mainClass": "test",
-            "projectName": "acm_code_4d9ec75a"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - java30",
-            "request": "launch",
-            "mainClass": "java30",
-            "projectName": "acm_code_4d9ec75a"
-        },
-        {
+                {
             "name": "C++ Launch (GDB)",
             "type": "cppdbg",
             "request": "launch",
