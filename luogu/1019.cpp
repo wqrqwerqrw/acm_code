@@ -28,15 +28,12 @@ void getch(){
     for(int i = 0; i < n; i++)
         for(int j = 0; j < n; j++)
             ch[i][j] = getchong(str[i], str[j]);
-    /* currect
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             cout << ch[i][j] << "   ";
         }
         cout << endl;
-        cout << endl;
     }
-    */
 }
 
 void dfs(int chr, int num){
@@ -52,6 +49,10 @@ void dfs(int chr, int num){
 }
 
 int main(){
+    iofuck;
+    #ifndef ONLINE_JUDGE
+    freopen("in.txt","r",stdin);
+    #endif
     cin >> n;
     for(int i = 0; i < n; i++){
         cin >> str[i];

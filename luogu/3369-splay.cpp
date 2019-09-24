@@ -46,10 +46,9 @@ struct Splay{
         update(cur), update(f);
     }
     void splay(int nc, int to){
-        int to = ns[nc].fa;
-        while(ns[nc].fa != to){
+        while(ns[nc].fa != ns[to].fa){
             int nf = ns[nc].fa;
-            if(ns[nf].fa == to) rotate(nc);
+            if(ns[nf].fa == ns[to].fa) rotate(nc);
             else if(id(nc) == id(nf)){
                 rotate(nf);
                 rotate(nc);
