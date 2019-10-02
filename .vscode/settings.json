@@ -84,4 +84,5 @@
         "rope": "cpp",
         "slist": "cpp"
     },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
