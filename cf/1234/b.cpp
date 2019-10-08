@@ -26,7 +26,7 @@ ll powmod(ll a,ll b) {ll res=1;a%=mod; assert(b>=0); for(;b;b>>=1){if(b&1)res=re
 const int nmax = 2e5 + 10;
 int n, k;
 vi id(nmax);
-unordered_set<int> cur;
+set<int> cur;
 queue<int> q;
 int main(){
 #ifndef ONLINE_JUDGE

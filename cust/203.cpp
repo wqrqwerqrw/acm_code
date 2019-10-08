@@ -1,5 +1,5 @@
 // Author : Wqr_
-// Time : 19/10/02
+// Time : 19/10/06
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -11,6 +11,8 @@ int main(){
     freopen("in.txt","r",stdin);
 #endif
     std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    
+    ll a, b;
+    cin >> a >> b;
+    cout << a + b << endl;
     return 0;
 }
