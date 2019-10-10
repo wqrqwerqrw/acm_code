@@ -104,7 +104,7 @@ const int B = 500;
 const int INF = (int)1e9;
 
 int main() {
-#ifdef LOCAL
+#ifdef Wqr_
     freopen("input.txt", "r", stdin);
 #endif
     ios::sync_with_stdio(false);

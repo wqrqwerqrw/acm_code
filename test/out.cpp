@@ -1,5 +1,5 @@
 /*   _ _ _                     
-    |*| | | ___  ___           
+    | | | | ___  ___           
     | | | || . ||  _|          
     |_____||_  ||_|  _____     
              |_|    |_____|  */
@@ -15,6 +15,6 @@ int main(){
     freopen("in.txt","r",stdin);
 #endif
     std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    
+    cout << 1 << endl;
     return 0;
 }

@@ -7,7 +7,3 @@ using namespace std;
 typedef long long ll;
 int main(){
     int t = 3;
-    t = t | 1;
-    cout << t << endl;
-    return 0;
-}
