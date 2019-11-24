@@ -3,11 +3,11 @@
         {
             "name": "MinGW64",
             "intelliSenseMode": "gcc-x64",
-            "compilerPath": "C:/MinGw/bin/g++.exe",
+            "compilerPath": "C:/Users/wqrli/scoop/apps/gcc/current/bin/g++.exe",
             "includePath": [
-                "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++"
+                "C:/Users/wqrli/scoop/apps/gcc/current/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"
             ],
-            "cppStandard": "c++14"
+            "cppStandard": "c++17"
         }
     ],
     "version": 4

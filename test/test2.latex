@@ -1,0 +1,640 @@
+\hypertarget{section}{%
+\section{11}\label{section}}
+
+\hypertarget{section-1}{%
+\subsection{22}\label{section-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-2}{%
+\subsubsection{33}\label{section-2}}
+
+\hypertarget{section-3}{%
+\subsection{22}\label{section-3}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-4}{%
+\subsubsection{33}\label{section-4}}
+
+\hypertarget{section-5}{%
+\subsection{22}\label{section-5}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-6}{%
+\subsubsection{33}\label{section-6}}
+
+\hypertarget{section-7}{%
+\subsection{22}\label{section-7}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-8}{%
+\subsubsection{33}\label{section-8}}
+
+\hypertarget{section-9}{%
+\subsection{22}\label{section-9}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-10}{%
+\subsubsection{33}\label{section-10}}
+
+\hypertarget{section-11}{%
+\subsection{22}\label{section-11}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-12}{%
+\subsubsection{33}\label{section-12}}
+
+\hypertarget{section-13}{%
+\subsection{22}\label{section-13}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-14}{%
+\subsubsection{33}\label{section-14}}
+
+\hypertarget{section-15}{%
+\subsection{22}\label{section-15}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-16}{%
+\subsubsection{33}\label{section-16}}
+
+\hypertarget{section-17}{%
+\subsection{22}\label{section-17}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-18}{%
+\subsubsection{33}\label{section-18}}
+
+\hypertarget{section-19}{%
+\subsection{22}\label{section-19}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-20}{%
+\subsubsection{33}\label{section-20}}
+
+\hypertarget{section-21}{%
+\subsection{22}\label{section-21}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-22}{%
+\subsubsection{33}\label{section-22}}
+
+\hypertarget{section-23}{%
+\subsection{22}\label{section-23}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-24}{%
+\subsubsection{33}\label{section-24}}
+
+\hypertarget{section-25}{%
+\subsection{22}\label{section-25}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-26}{%
+\subsubsection{33}\label{section-26}}
+
+\hypertarget{section-27}{%
+\subsection{22}\label{section-27}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-28}{%
+\subsubsection{33}\label{section-28}}
+
+\hypertarget{section-29}{%
+\subsection{22}\label{section-29}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-30}{%
+\subsubsection{33}\label{section-30}}
+
+\hypertarget{section-31}{%
+\subsection{22}\label{section-31}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-32}{%
+\subsubsection{33}\label{section-32}}
+
+\hypertarget{section-33}{%
+\subsection{22}\label{section-33}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-34}{%
+\subsubsection{33}\label{section-34}}
+
+\hypertarget{section-35}{%
+\subsection{22}\label{section-35}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-36}{%
+\subsubsection{33}\label{section-36}}
+
+\hypertarget{section-37}{%
+\subsection{22}\label{section-37}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{section-38}{%
+\subsubsection{33}\label{section-38}}
+
+\hypertarget{section-39}{%
+\subsection{22}\label{section-39}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{/*   _ _ _                     }
+\CommentTok{    | | | | ___  ___           }
+\CommentTok{    | | | || . ||  _|          }
+\CommentTok{    |_____||_  ||_|  _____     }
+\CommentTok{             |_|    |_____|  */}
+\CommentTok{// Time : 19/10/13}
+\PreprocessorTok{#include }\ImportTok{<bits/stdc++.h>}
+\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
+\KeywordTok{typedef} \DataTypeTok{long} \DataTypeTok{long}\NormalTok{ ll;}
+\PreprocessorTok{#define inf }\BaseNTok{0x3f3f3f3f}
+\DataTypeTok{int}\NormalTok{ main()\{}
+\PreprocessorTok{#ifdef Wqr_}
+\NormalTok{    freopen(}\StringTok{"in.txt"}\NormalTok{,}\StringTok{"r"}\NormalTok{,stdin);}
+\PreprocessorTok{#endif}
+    \BuiltInTok{std::}\NormalTok{ios}\BuiltInTok{::}\NormalTok{sync_with_stdio(}\KeywordTok{false}\NormalTok{),cin.tie(}\DecValTok{0}\NormalTok{),cout.tie(}\DecValTok{0}\NormalTok{);}
+    \DataTypeTok{int}\NormalTok{ a, b;}
+    \ControlFlowTok{while}\NormalTok{(cin >> a >> b)\{}
+\NormalTok{        cout << a + b << endl;}
+\NormalTok{    \}}
+    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+

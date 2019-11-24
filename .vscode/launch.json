@@ -3,18 +3,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
-            "name": "CodeLens (Launch) - f",
+            "name": "Python: 当前文件",
+            "type": "python",
             "request": "launch",
-            "mainClass": "f",
-            "projectName": "acm_code_4d9ec75a"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - a",
-            "request": "launch",
-            "mainClass": "a",
-            "projectName": "acm_code_4d9ec75a"
+            "program": "${file}",
+            "console": "integratedTerminal"
         },
         {
             "name": "C++ Launch (GDB)",
@@ -25,10 +18,10 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}/",
-            "externalConsole": true,
+            "externalConsole": false,
             "internalConsoleOptions": "neverOpen",
             "MIMode": "gdb",
-            "miDebuggerPath": "C:/MinGw/bin/gdb.exe",
+            "miDebuggerPath": "C:/Users/wqrli/scoop/apps/gcc/current/bin/gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
