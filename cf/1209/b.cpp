@@ -8,9 +8,6 @@ typedef long long ll;
 bool beg[110];
 int a[110], b[110];
 int main(){
-#ifndef ONLINE_JUDGE
-    freopen("in.txt","r",stdin);
-#endif
     int n;
     cin >> n;
     string str;

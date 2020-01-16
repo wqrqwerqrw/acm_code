@@ -13,11 +13,11 @@ typedef vector<ll> vll;
 typedef pair<int, int> pii;
 ll k;
 void tr(char& in){
-    int kk;
+    int k;
     if(isdigit(in)){
-        kk = k % 10;
+        k = k % 10;
         in -= '0';
-        in -= kk;
+        in -= k;
         if(in < 0){
             in += 10;
         }
@@ -25,10 +25,10 @@ void tr(char& in){
         in += '0';
     }
     if(isalpha(in)){
-        kk = k % 26;
+        k = k % 26;
         if(islower(in)){
             in -= 'a';
-            in -= kk;
+            in -= k;
             if(in < 0){
                 in += 26;
             }
@@ -37,7 +37,7 @@ void tr(char& in){
             in = toupper(in);
         }else if(isupper(in)){
             in -= 'A';
-            in -= kk;
+            in -= k;
             if(in < 0){
                 in += 26;
             }

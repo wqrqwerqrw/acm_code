@@ -88,7 +88,10 @@
 			"typeinfo": "cpp",
 			"valarray": "cpp",
 			"rope": "cpp",
-			"slist": "cpp"
+			"slist": "cpp",
+			"charconv": "cpp",
+			"optional": "cpp",
+			"string_view": "cpp"
 		}
 	}
 }

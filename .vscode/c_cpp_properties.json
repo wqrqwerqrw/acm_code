@@ -5,7 +5,7 @@
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "C:/Users/wqrli/scoop/apps/gcc/current/bin/g++.exe",
             "includePath": [
-                "C:/Users/wqrli/scoop/apps/gcc/current/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"
+                "${workspaceFolder}"
             ],
             "cppStandard": "c++17"
         }
