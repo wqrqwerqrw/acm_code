@@ -4,16 +4,17 @@
 #define endl "\n"
 typedef long long ll;
 using namespace std;
-int f(int f){return 1;}
-signed main(){
+signed main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+    freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    int n;
-    cin >> n;
-    vector<int> v(n);
-    float a = 0;
-    for(auto& i : v) cin >> i;
+    std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+    vector<int> v = {1, 2, 3, 5};
+    int a, b, c;
+    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });
+    for(auto i  : v) if(i){
+        cout << i << endl;
+    }
+    dbg(a, b, c);
     return 0;
 }

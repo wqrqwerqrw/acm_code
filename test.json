@@ -1,0 +1,23 @@
+{
+    "workbench.colorTheme": "One Monokai",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.fontFamily": "Source Code pro",
+    "editor.fontSize": 18,
+    "background.customImages": "C:\\Users\\Answer Accepted\\Pictures\\Saved Pictures\\preview.jpg",
+    "background.enable": true,
+    "background.useDefault": false,
+    "background.style": {
+        "content": "''",
+        "pointer-events": "none",
+        "position": "absolute",
+        "top": "0",
+        "right": "0",
+        "width": "100%",
+        "height": "100%",
+        "z-index": "99999",
+        "background.repeat": "no-repeat",
+        "background-size": "contain",
+        "opacity": 0.1
+    }
+}

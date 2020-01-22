@@ -11,8 +11,8 @@ int32_t main(){
     freopen("in.txt","r",stdin);
     #endif
     int n;cin>>n;
-    for(int i=1;i<=n;i++)cin>>a[i],s[i]=s[i-1]+a[i];
-    for(int i=1;i<=n;i++)dp[i][i]=a[i];
+    for (int i = 1; i <= n; i++) cin >> a[i], s[i] = s[i - 1] + a[i];
+    for (int i = 1; i <= n; i++) dp[i][i] = a[i];
     for(int k=2;k<=n;k++)
         for(int i=1;i<=n-1;i++){
             int j=min(n,i+k-1);

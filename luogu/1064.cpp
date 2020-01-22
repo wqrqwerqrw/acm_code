@@ -1,25 +1,34 @@
-// Author : Wqr_
-// Time : 19/09/24
-#include<bits/stdc++.h>
-#define INF 0x3f3f3f3f
-#define ttt cout << "<><><>" << endl;
-using namespace std;
+// Wqr_
+// Time : 20/01/22
+#include <bits/stdc++.h>
+#define endl "\n"
 typedef long long ll;
-const int nmax = 32000 + 10, mmax = 60 + 5;
+using namespace std;
+const int N = 32000 + 100;
 int n, m;
-struct node{
-    int v, p, q;
-};
-vector<node> ns(nmax);
-int main(){
-#ifndef ONLINE_JUDGE
-    freopen("in.txt","r",stdin);
+int v[N], p[N], q[N], f[N], t[N];
+signed main() {
+#ifdef Wqr_
+    freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+    std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
     cin >> n >> m;
-    for(int i = 1; i <= n; i++){
-        cin >> ns[i].v >> ns[i].p >> ns[i].q;
-        ns[i].p *= ns[i].v;
+    // dbg(n, m);
+    for (int i = 1; i <= m; i++) {
+        cin >> v[i] >> p[i] >> q[i];
+        p[i] *= v[i];
     }
+    for (int i = 1; i <= m; i++) {
+        if (!q[i]) {
+            for (int j = 1; j < v[i]; j++) t[j] = 0;
+            for (int j = v[i]; j <= n; j++) t[j] = f[j - v[i]] + p[i];
+            for (int j = 1; j <= m; j++)
+                if (q[j] == i)
+                    for (int k = n; k >= v[i] + v[j]; k--) t[k] = max(t[k], t[k - v[j]] + p[j]);
+            for (int j = v[i]; j <= n; j++) f[j] = max(f[j], t[j]);
+        }
+    }
+    // for(int i = 1; i <= n; i++) dbg(f[i]);
+    cout << f[n] << endl;
     return 0;
 }
