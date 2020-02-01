@@ -19,22 +19,22 @@ vector<int> g[N];
 int dp[1 << 17][200];
 int32_t main() {
 #ifdef Wqr_
-    freopen("in.txt", "r", stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
-    // 2 << 17 = 262144
-    cin >> n >> m;
-    int len = (1 << n);
-    int u, v;
-    for (int i = 0; i < m; i++) {
-        cin >> u >> v;
-        g[u].push_back(v);
-        g[v].push_back(u);
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  // 2 << 17 = 262144
+  cin >> n >> m;
+  int len = (1 << n);
+  int u, v;
+  for (int i = 0; i < m; i++) {
+    cin >> u >> v;
+    g[u].push_back(v);
+    g[v].push_back(u);
+  }
+  for (int i = 0; i < len; i++) {
+    for (int j = 0; j <= m; j++) {
+      dp[i][j] = inf;
     }
-    for (int i = 0; i < len; i++) {
-        for (int j = 0; j <= m; j++) {
-            dp[i][j] = inf;
-        }
-    }
-    return 0;
+  }
+  return 0;
 }

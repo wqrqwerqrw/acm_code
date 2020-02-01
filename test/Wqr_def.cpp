@@ -22,10 +22,10 @@ typedef long long ll;
 //typedef vector<ll> vll;
 typedef pair<int, int> pii;
 #define inf 0x3f3f3f3f
-int main(){
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    freopen("in.txt","r",stdin);
-    int n;
-    while(cin >> n) cout << n << endl;
-    return 0;
+int main() {
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  freopen("in.txt", "r", stdin);
+  int n;
+  while (cin >> n) cout << n << endl;
+  return 0;
 }

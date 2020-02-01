@@ -20,12 +20,12 @@ vector<int> prefix_function(string s) {
   }
   return pi;
 }
-int main(){
+int main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    auto v = prefix_function("abcabc");
-    for(auto &i : v) cout << i << endl;
-    return 0;
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  auto v = prefix_function("abcabc");
+  for (auto &i: v) cout << i << endl;
+  return 0;
 }

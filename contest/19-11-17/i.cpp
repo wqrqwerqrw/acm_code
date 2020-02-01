@@ -11,30 +11,30 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef pair<int, int> pii;
-int main(){
+int main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    string a[3];
-    cin >> a[0] >> a[1] >> a[2];
-    for(auto str : a){
-        bool flag = 0;
-        for(auto i : str){
-            if(flag){
-                if(i != '.'){
-                    cout << i << endl;
-                    return 0;
-                }
-            }
-            if(i == '='){
-                flag = 1;
-            }
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  string a[3];
+  cin >> a[0] >> a[1] >> a[2];
+  for (auto str: a) {
+    bool flag = 0;
+    for (auto i: str) {
+      if (flag) {
+        if (i != '.') {
+          cout << i << endl;
+          return 0;
         }
-        if(flag){
-            cout << "You shall pass!!!" << endl;
-            return 0;
-        }
+      }
+      if (i == '=') {
+        flag = 1;
+      }
     }
-    return 0;
+    if (flag) {
+      cout << "You shall pass!!!" << endl;
+      return 0;
+    }
+  }
+  return 0;
 }

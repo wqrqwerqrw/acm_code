@@ -4,9 +4,9 @@
     > Created Time: Tue Sep 25 21:07:28 2018
  ************************************************************************/
 
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-	cout << "不存在的" << endl;
-	return 0;
+int main() {
+  cout << "不存在的" << endl;
+  return 0;
 }

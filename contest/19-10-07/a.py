@@ -1,12 +1,13 @@
-def quick_algorithm(a,b,c):
-    a=a%c
-    ans=1
-    while b!=0:
-        if b&1:
-            ans=(ans*a)%c
-        b>>=1
-        a=(a*a)%c
+def quick_algorithm(a, b, c):
+    a = a % c
+    ans = 1
+    while b != 0:
+        if b & 1:
+            ans = (ans*a) % c
+        b >>= 1
+        a = (a*a) % c
     return ans
+
 
 mod = int(1e9 + 7)
 t = int(input())
@@ -18,14 +19,14 @@ while t != 0:
     f = []
     f.append(int(1))
     for i in range(k):
-        if i == 0 :
+        if i == 0:
             continue
         tmp = f[i - 1] * int(n - i + 1) // int(i)
-        f.append(tmp);
-    
+        f.append(tmp)
+
     ans = pow2
-    for i in f :
-        ans = ans - i;
+    for i in f:
+        ans = ans - i
 
     ans %= mod
     print("Case #", end='')
@@ -33,6 +34,3 @@ while t != 0:
     print(": ", end='')
     cnt = cnt + 1
     print(ans)
-            
-
-    

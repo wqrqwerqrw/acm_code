@@ -8,11 +8,11 @@
 using namespace std;
 typedef long long ll;
 #define inf 0x3f3f3f3f
-int main(){
+int main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    
-    return 0;
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+
+  return 0;
 }

@@ -12,12 +12,12 @@ typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef pair<int, int> pii;
 int n, k, q;
-int main(){
+int main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    int a[100];
-    for(auto i : a) cout << i << endl;
-    return 0;
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  int a[100];
+  for (auto i: a) cout << i << endl;
+  return 0;
 }

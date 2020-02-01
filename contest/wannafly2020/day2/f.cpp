@@ -16,21 +16,20 @@ typedef pair<int, int> pii;
 const int N = 1e5 + 7;
 vector<int> G[N];
 
-int32_t main(){
+int32_t main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    cin >> n;
-    int tmp;
-    for (int i = 2; i <= n; i++) {
-        cin >> tmp;
-        G[tmp].push_back(i);
-    }
-    d
-    for (int i = 1; i <= n; i++) {
-        cout << ans[i] << endl;
-    }
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  cin >> n;
+  int tmp;
+  for (int i = 2; i <= n; i++) {
+    cin >> tmp;
+    G[tmp].push_back(i);
+  }
+  d for (int i = 1; i <= n; i++) {
+    cout << ans[i] << endl;
+  }
 
-    return 0;
+  return 0;
 }

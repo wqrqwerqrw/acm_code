@@ -5,12 +5,11 @@
     > Created Time: Fri Sep 28 19:02:36 2018
  ************************************************************************/
 
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-	int x, y, p;
-	long long int t, a;
-	for(cin >> x >> y >> t >> a >> p){
-		
-	}
+int main() {
+  int x, y, p;
+  long long int t, a;
+  for (cin >> x >> y >> t >> a >> p) {
+  }
 }

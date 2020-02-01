@@ -24,20 +24,20 @@ bool C(int mid){
     return cos <= k;
 }
 */
-int main(){
+int main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    cin >> n >> k;
-    vi a(n), f(n);
-    for(auto &i : a) cin >> i;
-    for(auto &i : f) cin >> i;
-    sort(a.begin(), a.end());
-    sort(f.rbegin(), f.rend());
-    for(auto i : a) cout << i << endl;
-    int lb = 0, ub = a.back() * f.front(), mid, ans;
-    /*
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  cin >> n >> k;
+  vi a(n), f(n);
+  for (auto &i: a) cin >> i;
+  for (auto &i: f) cin >> i;
+  sort(a.begin(), a.end());
+  sort(f.rbegin(), f.rend());
+  for (auto i: a) cout << i << endl;
+  int lb = 0, ub = a.back() * f.front(), mid, ans;
+  /*
     while(lb <= ub){
         mid = (lb + ub) >> 1;
         if(C(mid)) ub = (ans = mid) - 1;
@@ -45,5 +45,5 @@ int main(){
     }
     cout << ans << endl;
     */
-    return 0;
+  return 0;
 }

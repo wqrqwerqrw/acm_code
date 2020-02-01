@@ -12,17 +12,17 @@ typedef long long ll;
 tree<ll, null_type, less<ll>, splay_tree_tag, tree_order_statistics_node_update> bbt;
 int n;
 int main() {
-    iofuck;
-    bbt.insert(1000);
-    bbt.insert(2000);
-    bbt.insert(3000);
-    bbt.insert(3000);
-    bbt.insert(3000);
-    bbt.insert(3000);
-    bbt.insert(4000);
-    bbt.insert(4000);
-    for(auto v : bbt){
-        cout << v << " ";
-    }
-    return 0;
+  iofuck;
+  bbt.insert(1000);
+  bbt.insert(2000);
+  bbt.insert(3000);
+  bbt.insert(3000);
+  bbt.insert(3000);
+  bbt.insert(3000);
+  bbt.insert(4000);
+  bbt.insert(4000);
+  for (auto v: bbt) {
+    cout << v << " ";
+  }
+  return 0;
 }

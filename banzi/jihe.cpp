@@ -11,16 +11,16 @@ typedef double db;
 typedef pair<int, int> pii;
 const db eps = 1e-8;
 const db pi = acos(-1);
-int sign(db k){
-    if(k > eps) return 1;
-    if(k < -eps) return -1;
-    return 0;
+int sign(db k) {
+  if (k > eps) return 1;
+  if (k < -eps) return -1;
+  return 0;
 }
-int cmp(db k1, db k2){return sign(k1 - k2);}
-signed main(){
+int cmp(db k1, db k2) { return sign(k1 - k2); }
+signed main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    return 0;
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  return 0;
 }

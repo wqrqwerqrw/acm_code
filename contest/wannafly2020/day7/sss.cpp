@@ -7,18 +7,18 @@
 #define ddd(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
 typedef long long ll;
 using namespace std;
-signed main(){
+signed main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    string in;
-    bool b = 0;
-    while(cin >> in){
-        if(b){
-            cout << in << "," << endl;
-        }
-        b = !b;
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  string in;
+  bool b = 0;
+  while (cin >> in) {
+    if (b) {
+      cout << in << "," << endl;
     }
-    return 0;
+    b = !b;
+  }
+  return 0;
 }

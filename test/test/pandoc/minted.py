@@ -41,5 +41,6 @@ def mintedify(key, value, format_, meta):
                                           options=join_options(pos+atts),
                                           cont=contents))]
 
+
 if __name__ == '__main__':
-    toJSONFilter(mintedify) 
+    toJSONFilter(mintedify)

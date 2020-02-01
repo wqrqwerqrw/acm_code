@@ -11,33 +11,31 @@ typedef long long ll;
 typedef pair<int, int> pii;
 const int nmax = 1e5 + 10;
 int n, arr[nmax];
-struct rrr{
-    bool operator()(const pii& a, const pii& b){
-        return a.
-    }
-}
-int main(){
+struct rrr {
+  bool operator()(const pii& a, const pii& b) {
+    return a.
+  }
+} int main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    cin >> n;
-    int maxn = -1;
-    int minn = inf;
-    for(int i = 0; i < n; i++){
-        cin >> arr[i];
-        maxn = max(maxn, arr[i]);
-        minn = min(minn, arr[i]);
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  cin >> n;
+  int maxn = -1;
+  int minn = inf;
+  for (int i = 0; i < n; i++) {
+    cin >> arr[i];
+    maxn = max(maxn, arr[i]);
+    minn = min(minn, arr[i]);
+  }
+  if (minn * 2 >= maxn) {
+    for (int i = 0; i < n; i++) {
+      cout << -1 << " ";
     }
-    if(minn * 2 >= maxn){
-        for(int i = 0; i < n; i++){
-            cout << -1 << " ";
-        }
-        cout << endl;
-        return 0;
-    }
-    for(int i = 0; i < n; i++){
-
-    }
+    cout << endl;
     return 0;
+  }
+  for (int i = 0; i < n; i++) {
+  }
+  return 0;
 }

@@ -12,27 +12,27 @@ typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef pair<int, int> pii;
 int jie[100];
-void init(){
-    jie[0] = 0;
-    jie[1] = 1;
-    for(int i = 2; i < 100; i++){
-        jie[i] = jie[i - 1] * i;
-    }
+void init() {
+  jie[0] = 0;
+  jie[1] = 1;
+  for (int i = 2; i < 100; i++) {
+    jie[i] = jie[i - 1] * i;
+  }
 }
 int n, k;
-int main(){
+int main() {
 #ifdef Wqr_
-    // freopen("in.txt","r",stdin);
+  // freopen("in.txt","r",stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    init();
-    int t;
-    cin >> t;
-    while(t--){
-        cin >> n >> k;
-        int minn = upper_bound(jie, jie + 10, k) - jie - 1;
-        
-        cout << minn << endl;
-    }
-    return 0;
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  init();
+  int t;
+  cin >> t;
+  while (t--) {
+    cin >> n >> k;
+    int minn = upper_bound(jie, jie + 10, k) - jie - 1;
+
+    cout << minn << endl;
+  }
+  return 0;
 }

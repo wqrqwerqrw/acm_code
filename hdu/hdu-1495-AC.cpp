@@ -5,27 +5,27 @@
     > Created Time: Wed Mar 13 21:50:36 2019
  ************************************************************************/
 
-#include<iostream>
-#include<cstdio>
-#include<cstring>
-#include<string>
-#include<vector>
-#include<algorithm>
-#include<cmath>
-#include<queue>
-#include<ext/pb_ds/assoc_container.hpp>
-#include<ext/pb_ds/tree_policy.hpp>
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+#include <queue>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
 using namespace std;
 using namespace __gnu_pbds;
 typedef long long ll;
-tree<ll,null_type,less<ll>,rb_tree_tag,tree_order_statistics_node_update> bbt;
+tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update> bbt;
 int s, n, m;
 bool book[102][102][102];
-struct node{
-    int deep;
-    int sc;
-    int nc;
-    int mc;
+struct node {
+  int deep;
+  int sc;
+  int nc;
+  int mc;
 };
 node opera(int ope, node in) {
   if (ope == 1) {

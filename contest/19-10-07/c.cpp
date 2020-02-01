@@ -7,17 +7,16 @@ typedef vector<int> vi;
 typedef vector<ll> vll;
 #define inf 0x3f3f3f3f
 int n;
-int main(){
+int main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    int t;
-    cin >> t;
-    for(ll kase = 1; kase <= t; ++kase){
-        cin >> n;
-        ++n;
-        
-    }
-    return 0;
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  int t;
+  cin >> t;
+  for (ll kase = 1; kase <= t; ++kase) {
+    cin >> n;
+    ++n;
+  }
+  return 0;
 }

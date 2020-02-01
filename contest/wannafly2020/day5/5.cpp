@@ -14,21 +14,21 @@ int tmp[N];
 int a[N];
 int b[4];
 int n;
-signed main(){
+signed main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    cin >> n;
-    for(int i = 0; i < n; i++) cin >> a[i];
-    for(int i = 0; i < 4; i++) cin >> b[i];
-    set<vector<int>> sett;
-    for(int i = 0; i < n; i++){
-        for(int j = i + 1; j < n; j++){
-            if((a[i] == a[j]) ==)
-        }
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  cin >> n;
+  for (int i = 0; i < n; i++) cin >> a[i];
+  for (int i = 0; i < 4; i++) cin >> b[i];
+  set<vector<int>> sett;
+  for (int i = 0; i < n; i++) {
+    for (int j = i + 1; j < n; j++) {
+      if ((a[i] == a[j]) ==)
     }
-    /*
+  }
+  /*
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
             if ((a[i] == a[j]) != (b[0] == b[1])) continue;
@@ -50,6 +50,6 @@ signed main(){
         }
     }
     */
-    cout << ans << endl;
-    return 0;
+  cout << ans << endl;
+  return 0;
 }

@@ -40,56 +40,56 @@ int dy[8] = {-1, -1, 1, 1, 2, 2, -2, -2};
 int dx[8] = {2, -2, 2, -2, 1, -1, 1, -1};
 int n, m;
 void bfs() {
-    while (!q.empty()) {
-        pii tp = q.front();
-        q.pop();
-        mp[tp]++;
-        for (int i = 0; i < 8; i++) {
-            int xx = tp.fi + dx[i], yy = tp.se + dy[i];
-            if (xx >= 1 && yy >= 1 && xx <= n && yy <= m) {
-                if (mp[{xx, yy}]) continue;
-                if (dy[i] == -2 && a[tp.fi][tp.se - 1] == 'X')
-                    continue;
-                else if (dy[i] == 2 && a[tp.fi][tp.se + 1] == 'X')
-                    continue;
-                else if (dx[i] == -2 && a[tp.fi - 1][tp.se] == 'X')
-                    continue;
-                else if (dx[i] == 2 && a[tp.fi + 1][tp.se] == 'X')
-                    continue;
-                q.push({xx, yy});
-                mp[{xx, yy}]++;
-                mp2[{xx, yy}] = mp2[tp] + 1;
-            }
-        }
+  while (!q.empty()) {
+    pii tp = q.front();
+    q.pop();
+    mp[tp]++;
+    for (int i = 0; i < 8; i++) {
+      int xx = tp.fi + dx[i], yy = tp.se + dy[i];
+      if (xx >= 1 && yy >= 1 && xx <= n && yy <= m) {
+        if (mp[{xx, yy}]) continue;
+        if (dy[i] == -2 && a[tp.fi][tp.se - 1] == 'X')
+          continue;
+        else if (dy[i] == 2 && a[tp.fi][tp.se + 1] == 'X')
+          continue;
+        else if (dx[i] == -2 && a[tp.fi - 1][tp.se] == 'X')
+          continue;
+        else if (dx[i] == 2 && a[tp.fi + 1][tp.se] == 'X')
+          continue;
+        q.push({xx, yy});
+        mp[{xx, yy}]++;
+        mp2[{xx, yy}] = mp2[tp] + 1;
+      }
     }
+  }
 }
 
 int main() {
-    IOS;
-    cin >> n >> m;
-    pii st;
-    for (int i = 1; i <= n; i++) {
-        cin >> a[i] + 1;
-        for (int j = 1; j <= m; j++)
-            if (a[i][j] == 'M') st.fi = i, st.se = j;
+  IOS;
+  cin >> n >> m;
+  pii st;
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i] + 1;
+    for (int j = 1; j <= m; j++)
+      if (a[i][j] == 'M') st.fi = i, st.se = j;
+  }
+  q.push(st);
+  mp2[st] = 0;
+  bfs();
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= m; j++) {
+      if (i == st.fi && j == st.se) {
+        cout << 0;
+        if (j != m) cout << ' ';
+        continue;
+      }
+      if (mp2[{i, j}])
+        cout << mp2[{i, j}];
+      else
+        cout << -1;
+      if (j != m) cout << ' ';
     }
-    q.push(st);
-    mp2[st] = 0;
-    bfs();
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= m; j++) {
-            if (i == st.fi && j == st.se) {
-                cout << 0;
-                if (j != m) cout << ' ';
-                continue;
-            }
-            if (mp2[{i, j}])
-                cout << mp2[{i, j}];
-            else
-                cout << -1;
-            if (j != m) cout << ' ';
-        }
-        if (i != n) cout << endl;
-    }
-    return 0;
+    if (i != n) cout << endl;
+  }
+  return 0;
 }

@@ -5,8 +5,7 @@
     > Created Time: Fri Sep 28 18:48:27 2018
  ************************************************************************/
 
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-	
+int main() {
 }

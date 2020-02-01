@@ -6,15 +6,16 @@ typedef long long ll;
 using namespace std;
 signed main() {
 #ifdef Wqr_
-    freopen("in.txt", "r", stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
-    vector<int> v = {1, 2, 3, 5};
-    int a, b, c;
-    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });
-    for(auto i  : v) if(i){
-        cout << i << endl;
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  vector<int> v = {1, 2, 3, 5};
+  int a, b, c;
+  sort(v.begin(), v.end(), [](int a, int b) { return a > b; });
+  for (auto i: v)
+    if (i) {
+      cout << i << endl;
     }
-    dbg(a, b, c);
-    return 0;
+  dbg(a, b, c);
+  return 0;
 }

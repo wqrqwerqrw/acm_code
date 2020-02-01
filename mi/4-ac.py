@@ -1,4 +1,6 @@
 import sys
+
+
 def do(numstr):
     nums = list(map(int, numstr))
     bit = 0
@@ -11,6 +13,7 @@ def do(numstr):
         if len(x) > maxn:
             maxn = len(x)
     print(maxn)
+
 
 for line in sys.stdin:
     line = line.strip()

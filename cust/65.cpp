@@ -5,8 +5,7 @@
     > Created Time: Mon Sep 24 18:45:56 2018
  ************************************************************************/
 
-#include<iostream>
+#include <iostream>
 using namespace std;
-int mian(){
-
+int mian() {
 }

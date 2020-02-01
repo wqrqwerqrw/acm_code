@@ -12,18 +12,17 @@ typedef long long ll;
 tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update> bbt;
 int n;
 int main() {
-    iofuck;
-    bbt.insert((100 << 20) + 1);
-    bbt.insert((200 << 20) + 2);
-    bbt.insert((300 << 20) + 3);
-    bbt.insert((400 << 20) + 4);
-    for(auto v : bbt){
-        cout << (v >> 20) << " ";
-    }
-    tttt
-    auto itl = bbt.lower_bound((150 << 20));
-    auto itr = bbt.upper_bound((50 << 20));
-    cout << (*itl >> 20) << endl;
-    cout << (*itr >> 20) << endl;
-    return 0;
+  iofuck;
+  bbt.insert((100 << 20) + 1);
+  bbt.insert((200 << 20) + 2);
+  bbt.insert((300 << 20) + 3);
+  bbt.insert((400 << 20) + 4);
+  for (auto v: bbt) {
+    cout << (v >> 20) << " ";
+  }
+  tttt auto itl = bbt.lower_bound((150 << 20));
+  auto itr = bbt.upper_bound((50 << 20));
+  cout << (*itl >> 20) << endl;
+  cout << (*itr >> 20) << endl;
+  return 0;
 }

@@ -11,11 +11,11 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef pair<int, int> pii;
-int main(){
+int main() {
 #ifdef Wqr_
-    freopen("in.txt","w",stdout);
+  freopen("in.txt", "w", stdout);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    for(int i = 1; i <= 99999; i++) cout << i << endl;
-    return 0;
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  for (int i = 1; i <= 99999; i++) cout << i << endl;
+  return 0;
 }

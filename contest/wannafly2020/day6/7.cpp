@@ -8,28 +8,29 @@
 typedef long long ll;
 using namespace std;
 int n;
-signed main(){
+signed main() {
 #ifdef Wqr_
-    // freopen("in.txt","r",stdin);
+  // freopen("in.txt","r",stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    int T; cin >> T;
-    for(int i = 0; i < T; i++){
-        cin >> n;
-        vector<int> f(n), p(n);
-        int allfu = 1;
-        for(int i = 0; i < n; i++){
-            cin >> f[i];
-            if(f[i] >= 0) allfu = 0;
-        }
-        if(allfu) {
-            for(int i = 0; i < n; i++){
-                if(i) cout << " ";
-                cout << i + 1;
-            }
-            cout << endl;
-            continue;
-        }
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  int T;
+  cin >> T;
+  for (int i = 0; i < T; i++) {
+    cin >> n;
+    vector<int> f(n), p(n);
+    int allfu = 1;
+    for (int i = 0; i < n; i++) {
+      cin >> f[i];
+      if (f[i] >= 0) allfu = 0;
     }
-    return 0;
+    if (allfu) {
+      for (int i = 0; i < n; i++) {
+        if (i) cout << " ";
+        cout << i + 1;
+      }
+      cout << endl;
+      continue;
+    }
+  }
+  return 0;
 }

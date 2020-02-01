@@ -5,15 +5,15 @@
     > Created Time: 2019年05月13日 星期一 17时25分14秒
  ************************************************************************/
 
-#include<iostream>
-#include<cstdio>
-#include<cstring>
-#include<string>
-#include<vector>
-#include<algorithm>
-#include<map>
-#include<queue>
-#include<cmath>
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <map>
+#include <queue>
+#include <cmath>
 using namespace std;
 typedef long long ll;
 typedef pair<int, int> pa;
@@ -21,31 +21,31 @@ int n;
 int a[100100];
 map<int, int> mapp;
 map<int, int> ci;
-bool cmp(pa ina, pa inb){
-    return ina.second > inb.second;
+bool cmp(pa ina, pa inb) {
+  return ina.second > inb.second;
 }
-int main(){
-    cin >> n;
-    int ans = 0;
-    int maxn = -1;
-    int minn = 0x3f3f3f3f;
-    for(int i = 0; i < n; i++){
-        scanf("%d", a + i);
-        if(mapp[a[i]] != 0){
-            ci[mapp[a[i]]]--;
-        }
-        mapp[a[i]]++;
-        ci[mapp[a[i]]]++;
-        if(ci.size() > 2) continue;
-        if(ci.size() == 1){
-            if(mapp[a[i]] == 1){
-                ans = i;
-                continue;
-            }
-        }
-        map<int, int> mark;
-        for()
-        /*
+int main() {
+  cin >> n;
+  int ans = 0;
+  int maxn = -1;
+  int minn = 0x3f3f3f3f;
+  for (int i = 0; i < n; i++) {
+    scanf("%d", a + i);
+    if (mapp[a[i]] != 0) {
+      ci[mapp[a[i]]]--;
+    }
+    mapp[a[i]]++;
+    ci[mapp[a[i]]]++;
+    if (ci.size() > 2) continue;
+    if (ci.size() == 1) {
+      if (mapp[a[i]] == 1) {
+        ans = i;
+        continue;
+      }
+    }
+    map<int, int> mark;
+    for ()
+    /*
         if(minn == 1 && (maxn == 1 || ci[1] == 1)) {
             ans = i;
         }
@@ -53,9 +53,9 @@ int main(){
             ans = i;
         }
         */
-    }
-    cout << ans + 1 << endl;
-    /*
+  }
+  cout << ans + 1 << endl;
+  /*
     for(int i = n - 1; i >= 0; i--){
         map<int, int> ci;
         int maxn = -1;
@@ -86,5 +86,5 @@ int main(){
         mapp[a[i]]--;
     }
     */
-    return 0;
+  return 0;
 }

@@ -11,47 +11,47 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef pair<int, int> pii;
-int main(){
+int main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    int n, k;
-    cin >> n;
-    vector<vector<pii>> v(n);
-    int a, b;
-    for(auto &i : v){
-        cin >> a >> b;
-        i.push_back({a, 1});
-        i.push_back({b, 0});
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  int n, k;
+  cin >> n;
+  vector<vector<pii>> v(n);
+  int a, b;
+  for (auto &i: v) {
+    cin >> a >> b;
+    i.push_back({a, 1});
+    i.push_back({b, 0});
+  }
+  stack<vector<pii>> st;
+  for (auto i: v) {
+    if (st.empty()) {
+      st.push(i);
+      continue;
     }
-    stack<vector<pii>> st;
-    for(auto i : v){
-        if(st.empty()){
-            st.push(i);
-            continue;
-        }
-        vector<pii> cur = st.top();
-        st.pop();
-        vector<pii> toin;
-        for(auto j : cur){
-            for(auto k : i){
-                int xishu;
-                int cifang;
-                xishu = j.first * k.first;
-                cifang = j.second + k.second;
-                toin.push_back({xishu, cifang});
-            }
-        }
-        st.push(toin);
+    vector<pii> cur = st.top();
+    st.pop();
+    vector<pii> toin;
+    for (auto j: cur) {
+      for (auto k: i) {
+        int xishu;
+        int cifang;
+        xishu = j.first * k.first;
+        cifang = j.second + k.second;
+        toin.push_back({xishu, cifang});
+      }
     }
-    cin >> k;
-    int ans = 0;
-    for(auto i : st.top()){
-        if(i.second == k){
-            ans += i.first;
-        }
+    st.push(toin);
+  }
+  cin >> k;
+  int ans = 0;
+  for (auto i: st.top()) {
+    if (i.second == k) {
+      ans += i.first;
     }
-    cout << ans << endl;
-    return 0;
+  }
+  cout << ans << endl;
+  return 0;
 }

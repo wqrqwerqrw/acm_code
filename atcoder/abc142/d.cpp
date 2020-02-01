@@ -8,22 +8,22 @@
 using namespace std;
 typedef long long ll;
 #define inf 0x3f3f3f3f
-int main(){
+int main() {
 #ifdef Wqr_
-    freopen("in.txt","r",stdin);
+  freopen("in.txt", "r", stdin);
 #endif
-    std::ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    ll a, b;
-    cin >> a >> b;
-    ll c = __gcd(a, b);
-    ll d = c, ans = 1;
-    for(ll i = 2; i * i <= c; i++){
-        if(c % i == 0){
-            ans++;
-            while(c % i == 0) c /= i;
-        }
+  std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+  ll a, b;
+  cin >> a >> b;
+  ll c = __gcd(a, b);
+  ll d = c, ans = 1;
+  for (ll i = 2; i * i <= c; i++) {
+    if (c % i == 0) {
+      ans++;
+      while (c % i == 0) c /= i;
     }
-    if(c != 1) ans++;
-    cout << ans << endl;
-    return 0;
+  }
+  if (c != 1) ans++;
+  cout << ans << endl;
+  return 0;
 }
