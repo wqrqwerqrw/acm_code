@@ -1,13 +1,13 @@
+// Wqr_
+// Time : 20/02/05
 #include <bits/stdc++.h>
+using ll = long long;
 using namespace std;
 signed main(){
 #ifdef Wqr_
   freopen("in.txt","r",stdin);
 #endif
-  ios::sync_with_stdio(false),cin.tie(0);
-  dbg();
-  string a = dM_PI;
-  cout << a << endl;
+  std::ios::sync_with_stdio(false),cin.tie(0);
   
   return 0;
 }

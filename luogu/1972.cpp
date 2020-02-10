@@ -1,64 +1,62 @@
-// Author : Wqr_
-// Time : 19/09/20
+// Wqr_
+// Time : 20/01/31
 #include <bits/stdc++.h>
-#define iofuck std::ios::sync_with_stdio(false), cin.tie(0), cout.tie(0)
-#define INF 0x3f3f3f3f
-using namespace std;
+#define endl "\n"
 typedef long long ll;
-const int nmax = 6e5 + 10;
-struct node {
-  int l, r, id, bl;
-} ns[nmax];
-int n, m, a[nmax], ans[nmax], cnt[1000000 + 100], block;
-int ret = 0;
-bool cmp(node& a, node& b) {
-  return (a.bl ^ b.bl) ? a.l < b.l : (((a.bl) & 1) ? a.r < b.r : a.r > b.r);
-  /*
-    if(a.bl == b.bl){
-        if(a.bl % 2) return a.r < b.r;
-        else return a.r > b.r;
-    }else{
-        return a.l < b.l;
-    }
-    */
+using namespace std;
+inline int re() {
+  char q = getchar();
+  int x = 0;
+  while (q < '0' || q > '9') q = getchar();
+  while ('0' <= q && q <= '9') x = (x << 3) + (x << 1) + q - (3 << 4), q = getchar();
+  return x;
 }
-void add(int x) {
-  if (!cnt[a[x]]) ret++;
-  cnt[a[x]]++;
-}
-void del(int x) {
-  cnt[a[x]]--;
-  if (!cnt[a[x]]) ret--;
-}
-int main() {
-  iofuck;
-#ifndef ONLINE_JUDGE
+struct Q {
+  int l, r, id;
+};
+  signed main() {
+#ifdef Wqr_
   freopen("in.txt", "r", stdin);
 #endif
-  cin >> n;
-  for (int i = 0; i < n; i++) cin >> a[i];
+  // std::ios::sync_with_stdio(false), cin.tie(0);
+  int n, m, block;
+  n = re();
+  vector<int> a(n);
+  for (auto& i: a) i = re();
   cin >> m;
+  vector<Q> q(m);
+  for (int i = 0; i < m; i++) {
+    q[i].l = re(), q[i].r = re();
+    // cin >> q[i].l >> q[i].r;
+    q[i].id = i;
+    --q[i].l;
+    --q[i].r;
+  }
   block = n / sqrt(m * 2 / 3);
+  sort(q.begin(), q.end(), [&](const Q& a, const Q& b) {
+    return (a.l / block) ^ (b.l / block) ? a.l < b.l : (((a.l / block) & 1) ? a.r < b.r : a.r > b.r);
+  });
+  vector<int> cnt(1000000 + 10);
+  int ans = 1;
+  auto add = [&](int x) {
+    if (!cnt[a[x]]) ans++;
+    cnt[a[x]]++;
+  };
+  auto del = [&](int x) {
+    cnt[a[x]]--;
+    if (!cnt[a[x]]) ans--;
+  };
+  vector<int> anss(m);
+  int l = 0, r = 0;
+  cnt[a[0]]++;
   for (int i = 0; i < m; i++) {
-    cin >> ns[i].l >> ns[i].r;
-    ns[i].l--, ns[i].r--;
-    ns[i].id = i;
-    ns[i].bl = ns[i].l / block;
-  }
-  sort(ns, ns + m, cmp);
-  for (int i = 0; i < m; i++) {
-    //cout << ns[i].l << "<->" << ns[i].r << endl;
-  }
-  int l = 0, r = 1;
-  add(l), add(r);
-  for (int i = 0; i < m; i++) {
-    int ql = ns[i].l, qr = ns[i].r;
+    int ql = q[i].l, qr = q[i].r;
     while (l < ql) del(l++);
     while (l > ql) add(--l);
     while (r < qr) add(++r);
     while (r > qr) del(r--);
-    ans[ns[i].id] = ret;
+    anss[q[i].id] = ans;
   }
-  for (int i = 0; i < m; i++) cout << ans[i] << endl;
+  for (auto i: anss) cout << i << endl;
   return 0;
 }

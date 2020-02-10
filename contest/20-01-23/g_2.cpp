@@ -2,6 +2,8 @@
 #include <cstring>
 #include <algorithm>
 #include <cmath>
+#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
 #define ll long long
 const int N = 100005;
@@ -17,7 +19,7 @@ struct edge {
   int to, next;
 } a[N << 1];
 int T, n, len, block, BL, m, col[N], o[N], head[N], cnt;
-int fa[N], dep[N], sz[N], son[N], top[N], dfn[N], low[N], ref[N];
+int fa[N], dep[N], sz[N], son[N], top[N], dfn[N], low[N], ref__[N];
 int ccnt, bl[N], s[N], tp;
 int cnt1, cnt2, vis[N], tot[N];
 ll sum[N], ans[N];
@@ -50,7 +52,7 @@ void dfs1(int u, int f) {
 void dfs2(int u, int up) {
   top[u] = up;
   dfn[u] = ++cnt;
-  ref[cnt] = u;
+  ref__[cnt] = u;
   int ttp = tp;
   if (son[u]) dfs2(son[u], up);
   if (tp - ttp >= block) {
@@ -98,6 +100,9 @@ void change(int u, int v) {
 }
 ll Gcd(ll A, ll B) { return B ? Gcd(B, A % B) : A; }
 int main() {
+#ifdef Wqr_
+  freopen("in.txt", "r", stdin);
+#endif
   T = gi();
   for (int zsy = 1; zsy <= T; zsy++) {
     printf("Case #%d:\n", zsy);
@@ -109,6 +114,7 @@ int main() {
     sort(o + 1, o + n + 1);
     len = unique(o + 1, o + n + 1) - o - 1;
     for (int i = 1; i <= n; i++) col[i] = lower_bound(o + 1, o + len + 1, col[i]) - o;
+    // for (int i = 0; i <= n; i++) cout << col[i] << "-";
     memset(head, 0, sizeof(head));
     cnt = ccnt = 0;
     memset(son, 0, sizeof(son));
@@ -144,10 +150,10 @@ int main() {
     memset(sum, 0, sizeof(sum));
     memset(vis, 0, sizeof(vis));
     for (int i = 1; i <= cnt1; i++) {
-      while (L > q1[i].l) L--, update(ref[L]);
-      while (R < q1[i].r) R++, update(ref[R]);
-      while (L < q1[i].l) update(ref[L]), L++;
-      while (R > q1[i].r) update(ref[R]), R--;
+      while (R < q1[i].r) R++, update(ref__[R]);
+      while (R > q1[i].r) update(ref__[R]), R--;
+      while (L > q1[i].l) L--, update(ref__[L]);
+      while (L < q1[i].l) update(ref__[L]), L++;
       ans[q1[i].id] = Gcd(sum[q1[i].a], sum[q1[i].b]);
     }
     memset(tot, 0, sizeof(tot));
